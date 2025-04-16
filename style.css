@@ -1,5 +1,8 @@
 :root {
     --blueBackground: linear-gradient(45deg, rgba(55, 165, 255, 0.897), rgba(9, 0, 139, 0.726));
+    --productTitle: "Forum", serif; 
+    --categoryTitle: "Instrument Serif", serif;
+    --productDescription: "Fraunces", serif;
 }
 
 * {
@@ -77,7 +80,7 @@ main {
 
     
 
-    aside h2 {
+    aside h1 {
         background: var(--blueBackground);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -132,10 +135,11 @@ main {
     padding: 1.5em;
     background: #f5f5f5;
     border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .category-box h2 {
+    font-family: var(--categoryTitle);
     font-size: 1.5em;
     margin-bottom: 1em;
     color: #003366;
@@ -145,12 +149,14 @@ main {
 }
 
 .category-box h3 {
+    font-family: var(--productTitle);
     margin: 0.5em 0 0.2em;
     font-size: 1.1em;
     color: #333;
 }
 
 .category-box p {
+    font-family: var(--productDescription);
     font-size: 0.9em;
     line-height: 1.4;
     color: #555;
@@ -173,4 +179,63 @@ main {
     margin-top: 0.3em;
     height: 1.2em;
     vertical-align: middle;
+}
+
+
+.category-box {
+    margin: 2em 1em;
+    padding: 1.5em;
+    background: #f5f5f5;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.category-box h2 {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    color: #003366;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 0.3em;
+}
+
+.product-box {
+    background: white;
+    border-radius: 10px;
+    padding: 1em;
+    margin: 1em 0;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.product-box:hover {
+    transform: translateY(-3px);
+}
+
+.product-box h3 {
+    font-size: 1.1em;
+    margin: 0.5em 0 0.2em;
+    color: #333;
+}
+
+.product-box p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0.5em 0;
+}
+
+.product-box img {
+    display: block;
+    max-width: 100px;
+    margin-bottom: 0.5em;
+    border-radius: 6px;
+}
+
+.product-box img[src*="rating"] {
+    height: 1.2em;
+    margin-top: 0.3em;
+}
+
+.product-box span {
+    font-size: 0.85em;
+    color: #999;
 }
